@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.invitation-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/public/images/savethedate.jpg'); /* Sesuaikan path gambar */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Great Vibes';
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.open-invitation {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.open-invitation:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: calc(1rem + 1.5vw);
+    transform: translate(-50%, 150%);
+  }
+  .App-header img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1.9;
+  }
+
+  .yth {
+    font-size: 50%;
+    font-weight: bold;
+  }
+
+  .nama-tamu{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .buka-undangan {
+    border-radius: 6px;
+    margin-top: 10px;
+    width: 65%;
+    height: 30px;
+    transition: all 600ms;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white !important;
+  }
+
+  .buka-undangan:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .savedate{
+    transition: all 600ms
+  }
+
+  .savedate:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  }
+}
+
+.save-the-date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  position: relative;
+}
+
+.photo {
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.center-text h1 {
+  font-size: 36px;
+  margin: 5px 0;
+}
+
+.horizontal-date {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.horizontal-date span {
+  font-size: 18px;
+}
+
+.center-text h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+.animate {
+  animation: slideUp 5s ease-out forwards;
+}
+
+.animate2 {
+  animation: slideUp 5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50%); /* Ubah dari 100% menjadi 30% */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.page-content {
+  transition: opacity 0.5s ease;
+}
+
+.page-content.hide {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.savedate {
+  position: relative;
+}
+
+.page-content {
+  position: relative;
+}
+
+.frames {
+  display: flex;
+  width: 33.3%;
+  height: auto;
+  object-fit: cover;
+}
+
+.small-text {
+  font-size: 0.4em;
+}
+
+.text-savedate {
+  text-align: center;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  /* bottom: 0;  */
+  /* z-index: 0;  */
+  padding: 100px; 
+}
+
+.save-date {
+  font-family: 'Great Vibes', cursive;
+  color : white;
+  font-size: calc(2rem + 1vw);
+  letter-spacing: 1px;
+}
+
+.date {
+  color : white;
+  font-size: calc(1.2rem + 1vw);
+  font-weight: bold;
+  font-family: initial;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.countdown {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.textCoundown {
+  font-family: 'Great Vibes', cursive;
+  font-size: calc(2rem + 1vw)
+}
+
+.formatTime {
+  background-color:snow;
+  color: black;
+  font-family:monospace;
+  border-radius: 10px;
+  border-style:dashed;
+  font-size: 2.0em;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.savedate {
+  background-color:snow;
+  border-radius: 10px;
+  border-style:solid;
+  width: 40%;
+  height: 40px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #d7d0b1;
+  color: #333;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f0e3;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.header-text {
+  margin-bottom: 20px;
+}
+
+.header-text p:first-child {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: none;
+}
+
+.header-text p {
+  font-size: 14px;
+  margin: 0;
+  text-align: justify;
+  font-family: none;
+}
+
+.bride-section, .groom-section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.bride-title, .groom-title {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 5px 10px;
+  font-size: 24px;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.bride-image, .groom-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bride-info, .groom-info {
+  background-color: rgba(51, 51, 51, 0.6);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  top: -10px;
+  margin-top: -140px;
+}
+
+.bride-info h2, .groom-info h2 {
+  margin: 10px 0 5px 0;
+  font-size: 24px;
+}
+
+.instagram img {
+  width: 24px;
+  height: 24px;
+}
+
+.bride-info p, .groom-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.ampersand {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.instagram {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.save-the-date {
+  text-align: center;
+  padding: 40px 20px;
+  background-image: url('/public/images/ideas1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.save-the-date h2 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.save-the-date p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.event {
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.event h3 {
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+.date {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.time {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: rgba(244, 180, 0, 0.5);
+  position: relative;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.btn:hover {
+  background-color: #e5a400;
+  cursor: pointer;
+}
+
+.videoYt {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery-title {
+  font-family: 'Cursive', sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 40px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.image-grid img:hover{
+  cursor: pointer;
+  transition: all 600ms;
+  transform: scale(1.25);
+}
+
+.video-section {
+  margin-bottom: 40px;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: -5px;
+}
+
+.form-konfirmwa {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.form-konfirmwa h2 {
+  font-family: 'Cursive', sans-serif;
+  text-align: center;
+  margin-top: 0px;
+  color: #333;
+}
+
+.form-konfirmwa p {
+  text-align: center;
+  margin-top: -20px;
+  color: #333;
+}
+
+.form-konfirmwa label {
+  display: block;
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-konfirmwa input,
+.form-konfirmwa select {
+  background-color: rgba(185, 185, 185, 0.5);
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-konfirmwa button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #037070;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.form-konfirmwa button:hover {
+  background-color: #023f3f;
+}
+
+.konfirmwa {
+  position: relative;
+}
+
+.mandatory::after {
+  content: " *";
+  color: rgb(250, 2, 2);
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  color: #555;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  position: relative;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #003772;
+}
+
+.card {
+  /* width: 300px; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.ucapan-doa {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.comment-count {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  position: relative;
+  width: 96%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#ucapan {
+  height: 100px;
+  resize: vertical;
+}
+
+.submit-button {
+  position: relative;
+  display: block;
+  /* width: 100%; */
+  padding: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #013770;
+}
+
+.hasil-ucapan {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: #e7f3ff;
+}
+
+.volume-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #67696b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 1px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.volume-button:hover {
+  background-color: #393b3b; /* Warna saat di-hover */
+}
+
+
+
